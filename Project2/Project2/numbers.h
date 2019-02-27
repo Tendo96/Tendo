@@ -70,5 +70,69 @@ string string_from_int(int number)
 		answer="девятнадцать";
 			break;
 	}
+	if (number/10==2)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="двадцать";
+	else answer="двадцать "+string_from_int(a);
+	}
+	else
+		if (number/10==3)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="тридцать";
+	else answer="тридцать "+string_from_int(a);
+	}
+	else
+		if (number/10==4)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="сорок";
+	else answer="сорок "+string_from_int(a);
+	}
+	else
+		if (number/10==5)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="пятьдесят";
+	else answer="пятьдесят "+string_from_int(a);
+	}
+	else
+		if (number/10==6)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="шестьдесят";
+	else answer="шестьдесят "+string_from_int(a);
+	}
+	else
+		if (number/10==7)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="семьдесят";
+	else answer="семьдесят "+string_from_int(a);
+	}
+	else
+		if (number/10==8)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="восемьдесят";
+	else answer="восемьдесят "+string_from_int(a);
+	}
+	else
+		if (number/10==9)
+	{
+	int a=number%10;
+	if (a==0)
+		answer="девяносто";
+	else answer="девяносто "+string_from_int(a);
+	}
+	return answer;
 }
 #endif
