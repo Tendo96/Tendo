@@ -4,13 +4,14 @@
 
 using namespace std;
 
-string string_from_int(int number)
+//string string_from_int(int number)
+string number_less_20_to_string(int number)
 {
 	string answer;
 	switch (number)
 	{
 	case 0:
-		answer="Ноль";
+		answer="ноль";
 			break;
 	case 1:
 		answer="один";
@@ -69,13 +70,24 @@ string string_from_int(int number)
 	case 19:
 		answer="девятнадцать";
 			break;
+			return answer;
 	}
+}
+	string number_less_100_to_string(int number)
+{
+	string answer;
+	if(number<20)
+	{
+		answer=number_less_20_to_string(number);
+	}
+	else
+	
 	if (number/10==2)
 	{
 	int a=number%10;
 	if (a==0)
 		answer="двадцать";
-	else answer="двадцать "+string_from_int(a);
+	else answer="двадцать "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==3)
@@ -83,7 +95,7 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="тридцать";
-	else answer="тридцать "+string_from_int(a);
+	else answer="тридцать "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==4)
@@ -91,7 +103,7 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="сорок";
-	else answer="сорок "+string_from_int(a);
+	else answer="сорок "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==5)
@@ -99,7 +111,7 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="пятьдесят";
-	else answer="пятьдесят "+string_from_int(a);
+	else answer="пятьдесят "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==6)
@@ -107,7 +119,7 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="шестьдесят";
-	else answer="шестьдесят "+string_from_int(a);
+	else answer="шестьдесят "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==7)
@@ -115,7 +127,7 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="семьдесят";
-	else answer="семьдесят "+string_from_int(a);
+	else answer="семьдесят "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==8)
@@ -123,7 +135,7 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="восемьдесят";
-	else answer="восемьдесят "+string_from_int(a);
+	else answer="восемьдесят "+number_less_20_to_string(a);
 	}
 	else
 		if (number/10==9)
@@ -131,8 +143,91 @@ string string_from_int(int number)
 	int a=number%10;
 	if (a==0)
 		answer="девяносто";
-	else answer="девяносто "+string_from_int(a);
+	else answer="девяносто "+number_less_20_to_string(a);
+	}
+	
+		return answer;
+	}
+	
+	string number_less_1000_to_string(int number)
+{
+	string answer;
+	if(number<100)
+	{
+		answer=number_less_100_to_string(number);
+	}
+		if (number/100==1)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="сто";
+	else answer="сто "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==2)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="двести";
+	else answer="двести "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==3)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="триста";
+	else answer="триста "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==4)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="четыреста";
+	else answer="четыреста "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==5)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="пятьсот";
+	else answer="пятьсот "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==6)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="шестьсот";
+	else answer="шестьсот "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==7)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="семьсот";
+	else answer="семьсот "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==8)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="восемьсот";
+	else answer="восемьсот "+number_less_100_to_string(a);
+	}
+	else
+		if (number/100==9)
+	{
+	int a=number%100;
+	if (a==0)
+		answer="девятьсот";
+	else answer="девятьсот "+number_less_100_to_string(a);
 	}
 	return answer;
+
 }
 #endif
