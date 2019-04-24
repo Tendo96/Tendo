@@ -230,4 +230,53 @@ string number_less_20_to_string(int number)
 	return answer;
 
 }
+	string sch(int number, string s1, string s2, string s3)
+{
+	string answer;
+	if (number==11||number==12||number==13||number==14) 
+		answer = number_less_1000_to_string(number)+" "+s3;
+	else
+	if (number%100==11||number%100==12||number%100==13||number%100==14)
+		answer = number_less_1000_to_string(number)+" "+s3;
+	else
+	if (number%10==1) 
+		answer = number_less_1000_to_string(number)+" "+s1;
+	else
+	if (number%10>1&&number%10<5) 
+		answer = number_less_1000_to_string(number)+" "+s2;
+	else
+		answer = number_less_1000_to_string(number)+" "+s3;
+	return answer;
+}
+string last(int s, string s1, string s2, string s3, int n, string n1, string n2, string n3)
+{
+	string answer;
+	int a=s%100;
+	int b=n%100;
+	if (a==11||a==12||a==13||a==14) 
+		answer = number_less_1000_to_string(s)+" "+s3;
+	else
+	if (s%10==1) 
+		answer = number_less_1000_to_string(s)+" "+s1;
+	else
+	if (s%10>1&&s%10<5) 
+		answer = number_less_1000_to_string(s)+" "+s2;
+	else
+		answer = number_less_1000_to_string(s)+" "+s3;
+	if(n==0)
+		answer=answer;
+	else
+	if (b==11||b==12||b==13||b==14) 
+	    answer = answer+", "+number_less_1000_to_string(n)+" "+n3;
+	else
+	if (n%10==1) 
+		answer = answer+", "+number_less_1000_to_string(n)+" "+n1;
+	else
+	if (n%10>1&&n%10<5) 
+		answer = answer+", "+number_less_1000_to_string(n)+" "+n2;
+	else
+		answer = answer+", "+number_less_1000_to_string(n)+" "+n3;
+	return answer;
+}
+
 #endif
